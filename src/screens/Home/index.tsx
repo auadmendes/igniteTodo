@@ -27,7 +27,7 @@ export function Home() {
   function handleAddTasks() {
 
     if (taskTitle === '') {
-      return Alert.alert('Alert 🟡', 'Please type a task to create!')
+      return Alert.alert('Alert ⚠️', 'Please type a task to create!')
     }
 
     const newTask: TaskProps = {
@@ -39,12 +39,11 @@ export function Home() {
     setTasks(prevState => [...prevState, newTask])
 
     setTaskTitle('')
-    console.log(tasks)
   }
 
   function handleDeleteTask(title: string) {
 
-    Alert.alert('Delete? 🔴', `Deleting ${title}?`, [
+    Alert.alert('Delete? 🚩', `Deleting ${title}?`, [
       {
         text: 'Yes',
         onPress: () => setTasks(prevState => tasks.filter(task => task.title !== title))

@@ -22,7 +22,6 @@ export function RadioButton({ data, onSelect }: Props) {
   return (
     <View style={styles.container}>
       {data.map((item) => {
-        //const dynamicStyle = item.color ? { backgroundColor: `#ff0` } : {};
         return (
           <Pressable
             key={item.color}
