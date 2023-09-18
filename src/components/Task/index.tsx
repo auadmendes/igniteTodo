@@ -8,11 +8,12 @@ import { useState } from "react";
 type Props = {
   title: string;
   status: boolean;
+  color: string;
   onDeleteTask: () => void;
   onCompleteTask: () => void;
 }
 
-export function Task({ title, status, onDeleteTask, onCompleteTask }: Props) {
+export function Task({ title, status, color, onDeleteTask, onCompleteTask }: Props) {
   const [isChecked, setIsChecked] = useState(false);
 
   function completeTaskStatus() {
@@ -21,7 +22,11 @@ export function Task({ title, status, onDeleteTask, onCompleteTask }: Props) {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[
+      { backgroundColor: `#${color}` },
+      styles.container]
+    }
+    >
       <TouchableOpacity>
         <Checkbox
           style={styles.checkbox}

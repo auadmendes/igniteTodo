@@ -4,7 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: 64,
-    backgroundColor: '#262626',
+    //backgroundColor: '#e2e2e2',
     borderRadius: 5,
     marginTop: 20,
 
@@ -22,7 +22,7 @@ export const styles = StyleSheet.create({
   },
   taskText: {
     flex: 1,
-    color: '#F2F2F2',
+    color: '#0D0D0D',
     flexWrap: 'wrap'
   },
   strikeText: {
